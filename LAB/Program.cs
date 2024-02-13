@@ -1,88 +1,67 @@
 ﻿using System;
-using System.IO;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Net;
 
-class Program
+public class ApiDemo
 {
-
-    static void LoremIpsum()
+    public void StartProcess(string processName)
     {
-        try
+        Process.Start(processName);
+    }
+
+    public string DownloadWebPage(string url)
+    {
+        using (var client = new WebClient())
         {
-            string filePath = @"C:\Users\victo\source\repos\LAB\LAB\LoremIpsum.txt";
-            loremIpsumText = File.ReadAllText(filePath);
-        }
-        catch (FileNotFoundException)
-        {
-            Console.WriteLine("Файл не знайдено.");
-            Environment.Exit(1);
+            return client.DownloadString(url);
         }
     }
 
-    static void WordCount()
+    public void WriteToFile(string filePath, string content)
     {
-        int wordCount = loremIpsumText.Split(new char[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries).Length;
-        Console.WriteLine($"Кількість слів у тексті: {wordCount}");
+        File.WriteAllText(filePath, content);
     }
 
-    static void Math()
+    public void DrawRectangle(string imagePath)
     {
-        Console.Write("Напиши число: ");
-        double inputNumber;
-        if (double.TryParse(Console.ReadLine(), out inputNumber))
+        using (var bitmap = new Bitmap(200, 200))
         {
-            double result = Square(inputNumber);
-            Console.WriteLine($"Квадрат введеного числа: {result}");
-        }
-        else
-        {
-            Console.WriteLine("Помилочка. Спробуй ще раз!");
-        }
-    }
-
-    static double Square(double number)
-    {
-        return number * number;
-    }
-
-    static string loremIpsumText;
-
-    static void Main()
-    {
-        LoremIpsum();
-
-        while (true)
-        {
-            Console.WriteLine("Оберіть опцію:");
-            Console.WriteLine("1. Вивести кількість слів у тексті Lorem Ipsum");
-            Console.WriteLine("2. Виконати математичну операцію");
-            Console.WriteLine("3. Вийти");
-
-            int choice;
-            if (int.TryParse(Console.ReadLine(), out choice))
+            using (var graphics = Graphics.FromImage(bitmap))
             {
-                switch (choice)
-                {
-                    case 1:
-                        WordCount();
-                        break;
-                    case 2:
-                        Math();
-                        break;
-                    case 3:
-                        Environment.Exit(0);
-                        break;
-                    default:
-                        Console.WriteLine("Сталася помилочка");
-                        break;
-                }
+                graphics.FillRectangle(Brushes.Red, 0, 0, 200, 200);
             }
-            else
-            {
-                Console.WriteLine("Сталася помилочка. Спробуй ще раз!");
-            }
+            bitmap.Save(imagePath, ImageFormat.Png);
+        }
+    }
 
-            Console.WriteLine();
+    public void UseGenericList()
+    {
+        List<string> myList = new List<string>();
+        myList.Add("Viktoriia");
+        myList.Add("Rekonvald");
+        myList.Add("310 group");
+
+        foreach (var item in myList)
+        {
+            Console.WriteLine(item);
         }
     }
 }
 
+class Program
+{
+    static void Main(string[] args)
+    {
+        ApiDemo apiDemo = new ApiDemo();
+        apiDemo.StartProcess("notepad.exe");
+        string webpageContent = apiDemo.DownloadWebPage("https://test-english.com");
+        apiDemo.WriteToFile("C:\\Users\\victo\\source\\repos\\LAB\\LAB\\file.txt", webpageContent);
+        apiDemo.DrawRectangle("C:\\Users\\victo\\source\\repos\\LAB\\LAB\\file.png");
+        apiDemo.UseGenericList();
+
+        Console.WriteLine("Demo completed!");
+    }
+}
