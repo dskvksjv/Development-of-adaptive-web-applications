@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Books>
+  <Book Id="1">
+    <Title>Книга 1</Title>
+  </Book>
+  <Book Id="2">
+    <Title>Книга 2</Title>
+  </Book>
+</Books>

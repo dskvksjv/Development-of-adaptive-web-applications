@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+    <html  dir="ltr" lang="uk" xml:lang="uk">
+    <head>
+        <title>MOODLE3 ЧНУ імені Петра Могили</title>
+        <link rel="shortcut icon" href="https://moodle3.chmnu.edu.ua/theme/image.php/_s/moove/theme/1691994244/favicon" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, MOODLE3 ЧНУ імені Петра Могили" />
+<link rel="stylesheet" type="text/css" href="https://moodle3.chmnu.edu.ua/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://moodle3.chmnu.edu.ua/theme/styles.php/_s/moove/1691994244_1/all" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/moodle3.chmnu.edu.ua","sesskey":"Mc7LODcYoJ","sessiontimeout":"5400","themerev":"1691994244","slasharguments":1,"theme":"moove","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1637111575","admin":"admin","svgicons":false,"usertimezone":"\u0404\u0432\u0440\u043e\u043f\u0430\/\u041a\u0438\u0457\u0432","contextid":2,"langrev":1706759884,"templaterev":"1637111575"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/moodle3.chmnu.edu.ua\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/moodle3.chmnu.edu.ua\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/moodle3.chmnu.edu.ua\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/moodle3.chmnu.edu.ua\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/moodle3.chmnu.edu.ua\/theme\/yui_combo.php?m\/1637111575\/","combine":true,"comboBase":"https:\/\/moodle3.chmnu.edu.ua\/theme\/yui_combo.php?","ext":false,"root":"m\/1637111575\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-availability_cohort-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_justify-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/moodle3.chmnu.edu.ua\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/moodle3.chmnu.edu.ua\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1637111575\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/moodle3.chmnu.edu.ua\/lib\/javascript.php\/1637111575\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/moodle3.chmnu.edu.ua\/lib\/javascript.php\/1637111575\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<meta name="moodle-validation" content="28428d758d6af72c2ba6c0a796cbbc71"><meta name="description" content="Ласкаво просимо до системи дистанційного навчання MOODLE3 ЧНУ імені Петра Могили!Welcome to the MOODLE3 distance learning system at Petro Mohyla Black Sea National University!" />
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    </head>
+    
+    <body  id="page-site-index" class="format-site course path-site dir-ltr lang-uk yui-skin-sam yui3-skin-sam moodle3-chmnu-edu-ua pagelayout-frontpage course-1 context-2 notloggedin ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+    
+
+<div id="accessibilitybar" class="fixed-top">
+    <div class="container">
+        <div class="bars">
+            <div class="fontsize">
+                <span>Font size</span>
+                <ul>
+                    <li><a class="btn btn-default" data-action="decrease" title="Decrease font size" id="fontsize_dec">A-</a></li>
+                    <li><a class="btn btn-default" data-action="reset" title="Reset font size" id="fontsize_reset">A</a></li>
+                    <li><a class="btn btn-default" data-action="increase" title="Increase font size" id="fontsize_inc">A+</a></li>
+                </ul>
+            </div>
+            <div class="sitecolor">
+                <span>Site color</span>
+                <ul>
+                    <li><a class="btn btn-default" data-action="reset" title="Reset site color" id="sitecolor_color1">R</a></li>
+                    <li><a class="btn btn-default" data-action="sitecolor-color-2" title="Low contrast 1" id="sitecolor_color2">A</a></li>
+                    <li><a class="btn btn-default" data-action="sitecolor-color-3" title="Low contrast 2" id="sitecolor_color3">A</a></li>
+                    <li><a class="btn btn-default" data-action="sitecolor-color-4" title="High contrast" id="sitecolor_color4">A</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="fixed-top navbar navbar-light navbar-expand moodle-has-zindex">
+
+    <a href="https://moodle3.chmnu.edu.ua" class="navbar-brand has-logo
+            ">
+            <span class="logo d-none d-sm-inline">
+                <img src="//moodle3.chmnu.edu.ua/pluginfile.php/1/theme_moove/logo/1691994244/Gerb_CHNU_sinij.jpg" alt="MOODLE3 ЧНУ імені Петра Могили">
+            </span>
+    </a>
+
+    <ul class="navbar-nav d-none d-md-flex custom-menus">
+        <!-- custom_menu -->
+        <li class="nav-item"><a class="nav-link" href="https://moodle3.chmnu.edu.ua" >MOODLE3 ЧНУ імені Петра Могили</a></li><div class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-65cb8e914072665cb8e913f4142" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+        Зв&#039;язок з адміністратором
+    </a>
+    <div class="dropdown-menu" aria-labelledby="drop-down-65cb8e914072665cb8e913f4142">
+                <a class="dropdown-item" href="https://moodle3.chmnu.edu.ua/mod/page/view.php?id=152853%22%20target%3D%22new" >Головний адміністратор MOODLE3 ЧНУ імені Петра Могили</a>
+    </div>
+</div><div class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-65cb8e914079065cb8e913f4143" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+        Документи
+    </a>
+    <div class="dropdown-menu" aria-labelledby="drop-down-65cb8e914079065cb8e913f4143">
+                <a class="dropdown-item" href="https://chmnu.edu.ua/polozhennya-shhodo-navchalno-naukovoyi-ta-inshoyi-diyalnosti-universitetu" target="new" >Положення щодо навчально-наукової та іншої діяльності університету</a>
+                <a class="dropdown-item" href="https://drive.google.com/drive/folders/1HFEnrEhyeFR6Q-hGPtWFXhOSZMC6a8zS" target="new" >Методичні рекомендації щодо роботи в MOODLE3 ЧНУ імені Петра Могили</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://drive.google.com/drive/folders/1YMPi5xM_t-XEvRMAPVDQvA9IbkEAVRPJ?usp=drive_link%22%20target%3D%22new" >Графік навчального процесу 2023-2024 н.р.</a>
+                <a class="dropdown-item" href="https://drive.google.com/drive/folders/1b0FXzxlHy04g5eDMwQCQ56sodWh_hRFh?usp=drive_link%22%20target%3D%22new" >Риска навчального процесу 2023-2024 н.р.</a>
+                <a class="dropdown-item" href="https://drive.google.com/drive/folders/1SsUGrpxoOVaPbQsbf3qarObhXg3b5mAt?usp=drive_link%22%20target%3D%22new" >Розклад оглядових лекцій та ЕК 2023-2024 н.р.</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://drive.google.com/drive/folders/1McQBiPF-Y212VbwpMUh-B1R2PeovLdd5?usp=drive_link%22%20target%3D%22new" >Розклад занять 2023-2024 н.р. (денна форма навчання)</a>
+                <a class="dropdown-item" href="https://drive.google.com/drive/folders/1GMkMusI4-LJwpXX5FyOQsSMb0BSnvSVh?usp=drive_link%22%20target%3D%22new" >Розклад сесії 2023-2024 н.р. (денна форма навчання)</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://drive.google.com/drive/folders/1so71Qcx4Hsb74rd6ESWPvNPybS2ayLEY?usp=drive_link%22%20target%3D%22new" >Розклад занять/сесії 2023-2024 н.р. (заочна форма навчання)</a>
+                <a class="dropdown-item" href="https://drive.google.com/drive/folders/11hnBzR2_DseXqvDFkBoTwGdiqMtx1ulM?usp=drive_link%22%20target%3D%22new" >Розклад занять/сесії 2023-2024 н.р. (заочна форма навчання при ННІПУА)</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://drive.google.com/drive/folders/1joGOcVQ7IPDF6bufVWOjOFjp3pJNjzlv?usp=drive_link%22%20target%3D%22new" >Розклад занять/сесії 2023-2024 н.р. (аспірантура)</a>
+    </div>
+</div><div class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-65cb8e914080265cb8e913f4144" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+        Корисні посилання
+    </a>
+    <div class="dropdown-menu" aria-labelledby="drop-down-65cb8e914080265cb8e913f4144">
+                <a class="dropdown-item" href="https://chmnu.edu.ua" target="new" >Офіційний сайт ЧНУ імені Петра Могили</a>
+                <a class="dropdown-item" href="https://facebook.com/chmnupres" target="new" >Офіційна сторінка ЧНУ імені Петра Могили [Facebook]</a>
+                <a class="dropdown-item" href="https://www.instagram.com/mogilyanka" target="new" >Офіційна сторінка ЧНУ імені Петра Могили [Instagram]</a>
+                <a class="dropdown-item" href="https://t.me/moodle3_chmnu" target="new" >Telegram-канал MOODLE3 ЧНУ імені Петра Могили [Telegram]</a>
+                <a class="dropdown-item" href="https://www.facebook.com/edudep.chmnu" target="new" >Навчально-методичний відділ ЧНУ імені Петра Могили [Facebook]</a>
+                <a class="dropdown-item" href="https://www.facebook.com/groups/part.time.chmnu" target="new" >Інститут післядипломної освіти ЧНУ імені Петра Могили [Facebook]</a>
+                <a class="dropdown-item" href="http://dspace.chmnu.edu.ua" target="new" >Інституційний репозиторій ЧНУ імені Петра Могили</a>
+    </div>
+</div>
+        <!-- page_heading_menu -->
+        
+    </ul>
+    <ul class="nav navbar-nav ml-auto">
+        <div class="d-none d-lg-block">
+            
+        </div>
+
+        <li class="nav-item lang-menu">
+            <div class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-65cb8e9140b4a65cb8e913f4147" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+        <i class="slicon-globe"></i>
+    </a>
+    <div class="dropdown-menu" aria-labelledby="drop-down-65cb8e9140b4a65cb8e913f4147">
+                <a class="dropdown-item" href="https://moodle3.chmnu.edu.ua/?lang=uk" title="Українська ‎(uk)‎">Українська ‎(uk)‎</a>
+                <a class="dropdown-item" href="https://moodle3.chmnu.edu.ua/?lang=en" title="English ‎(en)‎">English ‎(en)‎</a>
+    </div>
+</div>
+        </li>
+
+        
+
+        <li class="usermenu"><span class="login"><a class='btn btn-login-top' href="https://moodle3.chmnu.edu.ua/login/index.php">Увійти</a></span></li>
+    </ul>
+</nav>
+    
+    <div id="page-wrapper">
+    
+        <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Перейти до головного вмісту</a>
+</div><script src="https://moodle3.chmnu.edu.ua/lib/javascript.php/1637111575/lib/babel-polyfill/polyfill.min.js"></script>
+<script src="https://moodle3.chmnu.edu.ua/lib/javascript.php/1637111575/lib/polyfills/polyfill.js"></script>
+<script src="https://moodle3.chmnu.edu.ua/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://moodle3.chmnu.edu.ua/lib/javascript.php/1637111575/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+    <div id="page" class="container-fluid">
+        <div id="page-header" class="frontpage-guest-header">
+
+
+                <div class="row" id="loginbox">
+                    <div class="col-sm-12 hidden-sm-down col-md-7" id="intro">
+                            <h2>Ласкаво просимо до системи дистанційного навчання MOODLE3 ЧНУ імені Петра Могили!</h2>
+                    </div>
+                        <div class="col-12 col-sm-12 col-md-5 card d-none d-lg-block" id="boxForm">
+                            <div class="card-body">
+                                <h3>Доступ до платформи</h3>
+                                <form class="signup-form" action="https://moodle3.chmnu.edu.ua/login/index.php" method="POST" role="form">
+                                    <input type="hidden" name="logintoken" value="i444vqROb94foho2U1Gsid9F2E4ja9iZ">
+                                    <label for="username">
+                                            Ім’я входу
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-envelope add-on"></i></div>
+                                        <input type="text" class="form-control" id="username" name="username" placeholder="Ім’я входу" required />
+                                    </div>
+                            
+                                    <label for="password">Пароль</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-lock add-on"></i></div>
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Пароль" required />
+                                    </div>
+                            
+                                    <div class="sign-up-btn">
+                                        <button type="submit" class="btn btn-primary">Увійти</button>
+                                    </div>
+                                </form>
+                            
+                            
+                                <p class="my-2"><a href="https://moodle3.chmnu.edu.ua/login/forgot_password.php">Забули ім'я або пароль?</a></p>
+                            
+                            
+                                    <form action="https://moodle3.chmnu.edu.ua/login/index.php" method="post" id="guestlogin">
+                                        <input type="hidden" name="username" value="guest" />
+                                        <input type="hidden" name="password" value="guest" />
+                                        <input type="hidden" name="logintoken" value="i444vqROb94foho2U1Gsid9F2E4ja9iZ">
+                                        <button class="btn btn-default btn-block mt-2" type="submit">Увійдіть як гість</button>
+                                    </form>
+                            </div>
+                        </div><!-- end of .card-body -->
+                </div> <!-- end of #boxForm -->
+        </div>
+
+
+        <div class="container frontpage-maincontent">
+          <div role="main"><span id="maincontent"></span><div class="box py-3 generalbox sitetopic"><h2 class="sectionname">Інформація про навчальний процес</h2><ul class="section img-text"><li class="activity resource modtype_resource " id="module-450942"><div><div class="mod-indent-outer w-100"><div class="mod-indent"></div><div><div class="activityinstance"><a class="aalink" onclick="" href="https://moodle3.chmnu.edu.ua/mod/resource/view.php?id=450942"><img src="https://moodle3.chmnu.edu.ua/theme/image.php/_s/moove/core/1691994244/f/pdf-24" class="iconlarge activityicon" alt="" role="presentation" aria-hidden="true" /><span class="instancename">Наказ ректора ЧНУ імені Петра Могили №153 від 23 серпня 2023 року про підготовку до початку та особливості організації освітнього процесу в 2023/2024 навчальному році<span class="accesshide " > Файл</span></span></a></div></div></div></div></li><li class="activity label modtype_label " id="module-447548"><div><div class="mod-indent-outer w-100"><div class="mod-indent"></div><div><div class="contentwithoutlink "><div class="no-overflow"><div class="no-overflow"><table border="red" style="border-width: 5px; border-style: solid; border-color: rgb(239, 69, 64); width: 100%;">
+       <tbody>
+        <tr>
+            <th scope="col">
+                <h3 style="text-align: center;"><span style="color: #ff0000;"><strong><span class="" style="color: rgb(255, 0, 0);">Шановні співробітники та студенти ЧНУ імені Петра Могили!</span></strong><span class="" style="color: rgb(255, 0, 0);">
+                    </span></span><span class="" style="color: rgb(255, 0, 0);">
+                </span></h3>
+                <h4 style="text-align: center;"><span class="" style="color: rgb(0, 0, 0);">Просимо ознайомитися з порядком дій під час надзвичайних ситуацій:&nbsp;</span><a href="https://moodle3.chmnu.edu.ua/pluginfile.php/596449/mod_resource/content/1/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA%20%D0%B4%D1%96%D1%97%20%D1%83%20%D0%BD%D0%B0%D0%B4%D0%B7%D0%B2%D0%B8%D1%87%D0%B0%D0%B9%D0%BD%D0%B8%D1%85%20%D1%81%D0%B8%D1%82%D1%83%D0%B0%D1%86%D1%96%D1%8F%D1%85.pdf" target="_blank" style="font-size: 1.17188rem; background-color: rgb(255, 255, 255);"><span class="" style="color: rgb(0, 0, 255);">PDF-пам'ятка</span></a><span style="color: rgb(0, 0, 0); font-size: 1.17188rem;" class=""> та </span>
+                    <span class="" style="font-size: 1.17188rem; background-color: rgb(255, 255, 255); color: rgb(0, 0, 255);"><a href="https://www.youtube.com/watch?v=YIQpn-TKL1M&amp;ab_channel=PetroMohylaTV" target="_blank"><span class="" style="color: rgb(0, 0, 255);">коротка відеолекція [YouTube]</span></a></span>
+                </h4>
+                <h5 style="text-align: center;"><span style="color: rgb(239, 69, 64);" class="">Адміністрація ЧНУ імені Петра Могили</span></h5>
+            </th>
+        </tr>
+    </tbody>
+</table></div></div></div></div></div></div></li><li class="activity url modtype_url " id="module-176723"><div><div class="mod-indent-outer w-100"><div class="mod-indent"></div><div><div class="activityinstance"><a class="aalink" onclick="window.open(&#039;https://moodle3.chmnu.edu.ua/mod/url/view.php?id=176723&amp;redirect=1&#039;); return false;" href="https://moodle3.chmnu.edu.ua/mod/url/view.php?id=176723"><img src="https://moodle3.chmnu.edu.ua/theme/image.php/_s/moove/url/1691994244/icon" class="iconlarge activityicon" alt="" role="presentation" aria-hidden="true" /><span class="instancename">Онлайн-курс про академічну доброчесність [YouTube]<span class="accesshide " > URL (веб-посилання)</span></span></a></div></div></div></div></li><li class="activity url modtype_url " id="module-120980"><div><div class="mod-indent-outer w-100"><div class="mod-indent"></div><div><div class="activityinstance"><a class="aalink" onclick="window.open(&#039;https://moodle3.chmnu.edu.ua/mod/url/view.php?id=120980&amp;redirect=1&#039;); return false;" href="https://moodle3.chmnu.edu.ua/mod/url/view.php?id=120980"><img src="https://moodle3.chmnu.edu.ua/theme/image.php/_s/moove/url/1691994244/icon" class="iconlarge activityicon" alt="" role="presentation" aria-hidden="true" /><span class="instancename">Методичні рекомендації щодо роботи в MOODLE3 ЧНУ [Google Drive]<span class="accesshide " > URL (веб-посилання)</span></span></a></div></div></div></div></li><li class="activity url modtype_url " id="module-123469"><div><div class="mod-indent-outer w-100"><div class="mod-indent"></div><div><div class="activityinstance"><a class="aalink" onclick="window.open(&#039;https://moodle3.chmnu.edu.ua/mod/url/view.php?id=123469&amp;redirect=1&#039;); return false;" href="https://moodle3.chmnu.edu.ua/mod/url/view.php?id=123469"><img src="https://moodle3.chmnu.edu.ua/theme/image.php/_s/moove/url/1691994244/icon" class="iconlarge activityicon" alt="" role="presentation" aria-hidden="true" /><span class="instancename">Розклад занять 2023-2024 н.р. (денна форма навчання) [Google Drive]<span class="accesshide " > URL (веб-посилання)</span></span></a></div></div></div></div></li><li class="activity url modtype_url " id="module-123487"><div><div class="mod-indent-outer w-100"><div class="mod-indent"></div><div><div class="activityinstance"><a class="aalink" onclick="window.open(&#039;https://moodle3.chmnu.edu.ua/mod/url/view.php?id=123487&amp;redirect=1&#039;); return false;" href="https://moodle3.chmnu.edu.ua/mod/url/view.php?id=123487"><img src="https://moodle3.chmnu.edu.ua/theme/image.php/_s/moove/url/1691994244/icon" class="iconlarge activityicon" alt="" role="presentation" aria-hidden="true" /><span class="instancename">Графік навчального процесу 2023-2024 н.р. [Google Drive]<span class="accesshide " > URL (веб-посилання)</span></span></a></div></div></div></div></li><li class="activity url modtype_url " id="module-123473"><div><div class="mod-indent-outer w-100"><div class="mod-indent"></div><div><div class="activityinstance"><a class="aalink" onclick="window.open(&#039;https://moodle3.chmnu.edu.ua/mod/url/view.php?id=123473&amp;redirect=1&#039;); return false;" href="https://moodle3.chmnu.edu.ua/mod/url/view.php?id=123473"><img src="https://moodle3.chmnu.edu.ua/theme/image.php/_s/moove/url/1691994244/icon" class="iconlarge activityicon" alt="" role="presentation" aria-hidden="true" /><span class="instancename">Риска навчального процесу 2023-2024 н.р. [Google Drive]<span class="accesshide " > URL (веб-посилання)</span></span></a></div></div></div></div></li><li class="activity url modtype_url " id="module-123172"><div><div class="mod-indent-outer w-100"><div class="mod-indent"></div><div><div class="activityinstance"><a class="aalink" onclick="window.open(&#039;https://moodle3.chmnu.edu.ua/mod/url/view.php?id=123172&amp;redirect=1&#039;); return false;" href="https://moodle3.chmnu.edu.ua/mod/url/view.php?id=123172"><img src="https://moodle3.chmnu.edu.ua/theme/image.php/_s/moove/url/1691994244/icon" class="iconlarge activityicon" alt="" role="presentation" aria-hidden="true" /><span class="instancename">Розклад сесії 2023-2024 н.р. (денна форма навчання) [Google Drive]<span class="accesshide " > URL (веб-посилання)</span></span></a></div></div></div></div></li><li class="activity url modtype_url " id="module-120978"><div><div class="mod-indent-outer w-100"><div class="mod-indent"></div><div><div class="activityinstance"><a class="aalink" onclick="window.open(&#039;https://moodle3.chmnu.edu.ua/mod/url/view.php?id=120978&amp;redirect=1&#039;); return false;" href="https://moodle3.chmnu.edu.ua/mod/url/view.php?id=120978"><img src="https://moodle3.chmnu.edu.ua/theme/image.php/_s/moove/url/1691994244/icon" class="iconlarge activityicon" alt="" role="presentation" aria-hidden="true" /><span class="instancename">Розклад занять/сесії 2023-2024 н.р. (заочна форма навчання) [Google Drive]<span class="accesshide " > URL (веб-посилання)</span></span></a></div></div></div></div></li><li class="activity url modtype_url " id="module-176578"><div><div class="mod-indent-outer w-100"><div class="mod-indent"></div><div><div class="activityinstance"><a class="aalink" onclick="window.open(&#039;https://moodle3.chmnu.edu.ua/mod/url/view.php?id=176578&amp;redirect=1&#039;); return false;" href="https://moodle3.chmnu.edu.ua/mod/url/view.php?id=176578"><img src="https://moodle3.chmnu.edu.ua/theme/image.php/_s/moove/url/1691994244/icon" class="iconlarge activityicon" alt="" role="presentation" aria-hidden="true" /><span class="instancename">Розклад занять/сесії 2023-2024 н.р. (заочна форма навчання при ННІПУА) [Google Drive]<span class="accesshide " > URL (веб-посилання)</span></span></a></div></div></div></div></li><li class="activity url modtype_url " id="module-137193"><div><div class="mod-indent-outer w-100"><div class="mod-indent"></div><div><div class="activityinstance"><a class="aalink" onclick="window.open(&#039;https://moodle3.chmnu.edu.ua/mod/url/view.php?id=137193&amp;redirect=1&#039;); return false;" href="https://moodle3.chmnu.edu.ua/mod/url/view.php?id=137193"><img src="https://moodle3.chmnu.edu.ua/theme/image.php/_s/moove/url/1691994244/icon" class="iconlarge activityicon" alt="" role="presentation" aria-hidden="true" /><span class="instancename">Розклад занять/сесії 2023-2024 н.р. (аспірантура) [Google Drive]<span class="accesshide " > URL (веб-посилання)</span></span></a></div></div></div></div></li><li class="activity url modtype_url " id="module-296005"><div><div class="mod-indent-outer w-100"><div class="mod-indent"></div><div><div class="activityinstance"><a class="aalink" onclick="window.open(&#039;https://moodle3.chmnu.edu.ua/mod/url/view.php?id=296005&amp;redirect=1&#039;); return false;" href="https://moodle3.chmnu.edu.ua/mod/url/view.php?id=296005"><img src="https://moodle3.chmnu.edu.ua/theme/image.php/_s/moove/url/1691994244/icon" class="iconlarge activityicon" alt="" role="presentation" aria-hidden="true" /><span class="instancename">Розклад оглядових лекцій та ДЕК 2023-2024 н.р. [Google Drive]<span class="accesshide " > URL (веб-посилання)</span></span></a></div></div></div></div></li></ul></div><a class="skip-block skip aabtn" href="#skipcategories">Пропустити категорії курсів</a><div id="frontpage-category-names"><h2>Категорії курсів</h2><div class="course_category_tree clearfix frontpage-category-names"><div class="collapsible-actions"><a class="collapseexpand aabtn collapse-all" href="#">Згорнути все</a></div><div class="content"><div class="subcategories"><div class="category loaded with_children" data-categoryid="452" data-depth="1" data-showcourses="5" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=452">Денна форма навчання</a></h3></div><div class="content"><div class="subcategories"><div class="category notloaded with_children collapsed" data-categoryid="2525" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=2525">Вибіркові дисципліни</a></h4></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="4444" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=4444">Потокові дисципліни</a></h4></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="3395" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=3395">Дипломна робота &amp; Атестаційний екзамен</a></h4></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="5701" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=5701">2023-2024 н.р.</a></h4></div><div class="content"></div></div></div></div></div><div class="category loaded with_children" data-categoryid="6" data-depth="1" data-showcourses="5" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=6">Заочна форма навчання</a></h3></div><div class="content"><div class="subcategories"><div class="category notloaded with_children collapsed" data-categoryid="682" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=682">Курси підвищення кваліфікації та професійної перепідготовки</a></h4></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="4396" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=4396">Вибіркові дисципліни</a></h4></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="6379" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=6379">Потокові дисципліни</a></h4></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="3396" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=3396">Дипломна робота &amp; Атестаційний екзамен</a></h4></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="5769" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=5769">2023-2024 н.р.</a></h4></div><div class="content"></div></div></div></div></div><div class="category loaded with_children" data-categoryid="1368" data-depth="1" data-showcourses="5" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=1368">Foreign students</a></h3></div><div class="content"><div class="subcategories"><div class="category notloaded with_children collapsed" data-categoryid="6328" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=6328">Selective disciplines</a></h4></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="6462" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=6462">Combined courses</a></h4></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="5822" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=5822">2023-2024 year</a></h4></div><div class="content"></div></div></div></div></div><div class="category loaded with_children" data-categoryid="1661" data-depth="1" data-showcourses="5" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=1661">Відділ аспірантури</a></h3></div><div class="content"><div class="subcategories"><div class="category notloaded with_children collapsed" data-categoryid="5493" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=5493">Вибіркові дисципліни</a></h4></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="5821" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=5821">2023-2024 н.р.</a></h4></div><div class="content"></div></div></div></div></div><div class="category loaded with_children" data-categoryid="4632" data-depth="1" data-showcourses="5" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=4632">Фахові вступні випробування</a></h3></div><div class="content"><div class="subcategories"><div class="category notloaded with_children collapsed" data-categoryid="5824" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=5824">2023-2024 н.р.</a></h4></div><div class="content"></div></div></div></div></div><div class="category loaded with_children" data-categoryid="5726" data-depth="1" data-showcourses="5" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=5726">Інші курси</a></h3></div><div class="content"><div class="subcategories"><div class="category notloaded" data-categoryid="6540" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=6540">ERASMUS+</a><span title="Кількість курсів" class="numberofcourse"> (2)</span></h4></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="5725" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=5725">EVADEM</a></h4></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="4391" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=4391">Вибори</a></h4></div><div class="content"></div></div><div class="category notloaded" data-categoryid="3340" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=3340">Зворотний зв'язок за результатами вивчення дисциплін</a></h4></div><div class="content"></div></div><div class="category notloaded" data-categoryid="6856" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=6856">Інституційний репозитарій ЧНУ імені Петра Могили</a><span title="Кількість курсів" class="numberofcourse"> (1)</span></h4></div><div class="content"></div></div><div class="category notloaded" data-categoryid="4460" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=4460">Міжнародний конкурс з української мови імені Петра Яцика</a></h4></div><div class="content"></div></div><div class="category notloaded" data-categoryid="5397" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=5397">Ради факультетів</a></h4></div><div class="content"></div></div><div class="category notloaded" data-categoryid="5789" data-depth="2" data-showcourses="5" data-type="0"><div class="info"><h4 class="categoryname aabtn"><a href="https://moodle3.chmnu.edu.ua/course/index.php?categoryid=5789">Перескладання</a></h4></div><div class="content"></div></div></div></div></div></div></div></div></div><span class="skip-block-to" id="skipcategories"></span><br /><div class="box py-3 mdl-align"><form action="https://moodle3.chmnu.edu.ua/course/search.php" id="coursesearch" method="get" class="form-inline">
+    <fieldset class="coursesearchbox invisiblefieldset">
+        <label for="shortsearchbox">Пошук курсів</label>
+        <input id="shortsearchbox" name="q" type="text" size="12" value="" class="form-control mb-1 mb-sm-0">
+        <input name="areaids" type="hidden" value="core_course-course">
+        <button class="btn btn-secondary" type="submit">Застосувати</button>
+            <a class="btn btn-link p-0" role="button"
+                data-container="body" data-toggle="popover"
+                data-placement="right" data-content="&lt;div class=&quot;no-overflow&quot;&gt;&lt;p&gt;Ви можете шукати кілька слів одночасно і вдосконалювати пошук таким чином:&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;слово - знайти будь-який збіг цього слова в тексті&lt;/li&gt;
+&lt;li&gt;+слово - будуть знайдені лише слова, які точно відповідають&lt;/li&gt;
+&lt;li&gt;-word - не включати результати, що містять це слово.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt; "
+                data-html="true" tabindex="0" data-trigger="focus">
+              <i class="icon fa slicon-question text-info fa-fw "  title="Допомогти з Пошук курсів" aria-label="Допомогти з Пошук курсів"></i>
+            </a>
+    </fieldset>
+</form></div><br /></div>
+        </div>
+
+
+    </div>
+
+
+    
+
+</div><!-- Ends .page-wrapper -->
+
+<div id="top-footer">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-7 contact">
+            <h3>Stay in touch</h3>
+            <h4><p>Головний адміністратор <a href="https://moodle3.chmnu.edu.ua/mod/page/view.php?id=152853" target="_blank" rel="noopener"><strong>Лісков Дмитро Анатолійович</strong></a><br />
+<strong><a href="https://facebook.com/enot.dimas" target="_blank" rel="noopener">My Facebook</a></strong> |&nbsp;<strong><a href="http://t.me/dmytro_liskov " target="_blank" rel="noopener">My Telegram</a></strong> |&nbsp;<strong><a href="https://t.me/moodle3_chmnu" target="_blank" rel="noopener">Telegram-канал MOODLE3 ЧНУ</a></strong></p></h4>
+            <ul>
+            </ul>
+        </div>
+        <div class="col-md-5 social">
+          <ul>
+
+
+
+
+
+          </ul>
+
+          <div class="plugins_standard_footer_html"><div class="tool_dataprivacy mb-2"><a class="btn btn-default" href="https://moodle3.chmnu.edu.ua/admin/tool/dataprivacy/summary.php"><i class='slicon-folder-alt'></i> Підсумок збереження даних</a></div><div class="mobilefooter mb-2"><a class="btn btn-primary" href="https://download.moodle.org/mobile?version=2020061509&amp;lang=uk"><i class='slicon-screen-smartphone'></i> Завантажте мобільний додаток</a></div></div>
+        </div>
+    </div>
+  </div>
+</div>
+<footer id="page-footer" class="p-y-1">
+  <div class="container-fluid">
+      <div id="course-footer"></div>
+
+      <div class="madewithmoodle">
+          <p>З гордістю зробили з</p>
+          <a href="https://moodle.org"><img src="https://moodle3.chmnu.edu.ua/theme/moove/pix/moodle-logo-white.png" alt="Moodle logo"></a>
+      </div>
+
+      <div class="madeby">
+          <p>Зроблено з <i class="text-danger fa fa-heart"></i> від <a href="http://conecti.me">conecti.me</a></p>
+      </div>
+  </div>
+</footer>
+
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://moodle3.chmnu.edu.ua/lib/requirejs.php/1637111575/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://moodle3.chmnu.edu.ua/lib/javascript.php/1637111575/lib/jquery/jquery-3.5.1.min',
+        jqueryui: 'https://moodle3.chmnu.edu.ua/lib/javascript.php/1637111575/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://moodle3.chmnu.edu.ua/lib/javascript.php/1637111575/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://moodle3.chmnu.edu.ua/lib/javascript.php/1637111575/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");require(['core/first'], function() {
+require(['core/prefetch']);
+;
+function legacy_activity_onclick_handler_1(e) { e.halt(); window.open('https://moodle3.chmnu.edu.ua/mod/url/view.php?id=176723&redirect=1'); return false; };
+function legacy_activity_onclick_handler_2(e) { e.halt(); window.open('https://moodle3.chmnu.edu.ua/mod/url/view.php?id=120980&redirect=1'); return false; };
+function legacy_activity_onclick_handler_3(e) { e.halt(); window.open('https://moodle3.chmnu.edu.ua/mod/url/view.php?id=123469&redirect=1'); return false; };
+function legacy_activity_onclick_handler_4(e) { e.halt(); window.open('https://moodle3.chmnu.edu.ua/mod/url/view.php?id=123487&redirect=1'); return false; };
+function legacy_activity_onclick_handler_5(e) { e.halt(); window.open('https://moodle3.chmnu.edu.ua/mod/url/view.php?id=123473&redirect=1'); return false; };
+function legacy_activity_onclick_handler_6(e) { e.halt(); window.open('https://moodle3.chmnu.edu.ua/mod/url/view.php?id=123172&redirect=1'); return false; };
+function legacy_activity_onclick_handler_7(e) { e.halt(); window.open('https://moodle3.chmnu.edu.ua/mod/url/view.php?id=120978&redirect=1'); return false; };
+function legacy_activity_onclick_handler_8(e) { e.halt(); window.open('https://moodle3.chmnu.edu.ua/mod/url/view.php?id=176578&redirect=1'); return false; };
+function legacy_activity_onclick_handler_9(e) { e.halt(); window.open('https://moodle3.chmnu.edu.ua/mod/url/view.php?id=137193&redirect=1'); return false; };
+function legacy_activity_onclick_handler_10(e) { e.halt(); window.open('https://moodle3.chmnu.edu.ua/mod/url/view.php?id=296005&redirect=1'); return false; };
+
+require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+    CustomEvents.define('#single_select65cb8e913f4146', [CustomEvents.events.accessibleChange]);
+    $('#single_select65cb8e913f4146').on(CustomEvents.events.accessibleChange, function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f65cb8e913f4145').submit();
+        }
+    });
+});
+;
+
+require(['theme_boost/loader']);
+
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+});
+
+require(['theme_moove/metismenu', 'jquery'], function(metisMenu, $) {
+    $(".metismenu").metisMenu();
+});
+
+require([], function() {
+    var iconsearch = document.querySelector('.moove-search-input .slicon-magnifier');
+    var btnclosesearch = document.querySelector('.search-input-form .close-search');
+    var searchinputform = document.querySelector('.moove-search-input');
+
+    if (iconsearch) {
+
+        var togglesearchinputform = function() {
+            searchinputform.classList.toggle('expanded');
+        }
+
+        iconsearch.onclick = togglesearchinputform;
+        btnclosesearch.onclick = togglesearchinputform;
+    }
+});
+
+require(['theme_moove/accessibilitybar'], function(bar) {
+    bar.init();
+});
+
+require(['theme_moove/themesettings'], function(themesettings) {
+    themesettings.init();
+});
+
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2, [], false); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u041e\u0441\u0442\u0430\u043d\u043d\u044f \u0437\u043c\u0456\u043d\u0430","name":"\u041d\u0430\u0437\u0432\u0430","error":"\u041f\u043e\u043c\u0438\u043b\u043a\u0430","info":"\u0406\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u044f","yes":"\u0422\u0430\u043a","no":"\u041d\u0456","cancel":"\u0421\u043a\u0430\u0441\u0443\u0432\u0430\u0442\u0438","collapseall":"\u0417\u0433\u043e\u0440\u043d\u0443\u0442\u0438 \u0432\u0441\u0435","expandall":"\u0420\u043e\u0437\u0433\u043e\u0440\u043d\u0443\u0442\u0438 \u0432\u0441\u0456","confirm":"\u041f\u0456\u0434\u0442\u0432\u0435\u0440\u0434\u0436\u0435\u043d\u043d\u044f","areyousure":"\u0412\u0438 \u0432\u043f\u0435\u0432\u043d\u0435\u043d\u0456?","closebuttontitle":"\u0417\u0430\u043a\u0440\u0438\u0442\u0438","unknownerror":"\u041d\u0435\u0432\u0456\u0434\u043e\u043c\u0430 \u043f\u043e\u043c\u0438\u043b\u043a\u0430","file":"\u0424\u0430\u0439\u043b","url":"URL"},"repository":{"type":"\u0422\u0438\u043f","size":"\u0420\u043e\u0437\u043c\u0456\u0440","invalidjson":"\u041d\u0435\u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u0438\u0439 JSON \u0440\u044f\u0434\u043e\u043a","nofilesattached":"\u0424\u0430\u0439\u043b\u0438 \u043d\u0435 \u0434\u043e\u043b\u0443\u0447\u0435\u043d\u043e","filepicker":"\u0412\u0438\u0431\u0456\u0440 \u0444\u0430\u0439\u043b\u0443","logout":"\u0412\u0438\u0445\u0456\u0434","nofilesavailable":"\u041d\u0435\u043c\u0430\u0454 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0438\u0445 \u0444\u0430\u0439\u043b\u0456\u0432","norepositoriesavailable":"\u041d\u0430 \u0436\u0430\u043b\u044c, \u0436\u043e\u0434\u043d\u0435 \u0437 \u043f\u043e\u0442\u043e\u0447\u043d\u0438\u0445 \u0441\u0445\u043e\u0432\u0438\u0449 \u043d\u0435 \u043c\u043e\u0436\u0435 \u043f\u043e\u0432\u0435\u0440\u043d\u0443\u0442\u0438 \u0444\u0430\u0439\u043b\u0438 \u043f\u043e\u0442\u0440\u0456\u0431\u043d\u043e\u0433\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0443.","fileexistsdialogheader":"\u0424\u0430\u0439\u043b \u0456\u0441\u043d\u0443\u0454","fileexistsdialog_editor":"\u0424\u0430\u0439\u043b \u0437 \u0442\u0430\u043a\u043e\u044e \u043d\u0430\u0437\u0432\u043e\u044e \u0432\u0436\u0435 \u0431\u0443\u0432 \u043f\u0440\u0438\u0454\u0434\u043d\u0430\u043d\u0438\u0439 \u0434\u043e \u0440\u0435\u0434\u0430\u0433\u043e\u0432\u0430\u043d\u043e\u0433\u043e \u0442\u0435\u043a\u0441\u0442\u0443.","fileexistsdialog_filemanager":"\u0424\u0430\u0439\u043b \u0437 \u0442\u0430\u043a\u043e\u044e \u043d\u0430\u0437\u0432\u043e\u044e \u0432\u0436\u0435 \u0431\u0443\u0432 \u043f\u0440\u0438\u0454\u0434\u043d\u0430\u043d\u0438\u0439","renameto":"\u041f\u0435\u0440\u0435\u0439\u043c\u0435\u043d\u0443\u0432\u0430\u0442\u0438 \u0432 \"{$a}\"","referencesexist":"\u041d\u0430 \u0446\u0435\u0439 \u0444\u0430\u0439\u043b \u0454 {$a} \u043f\u043e\u0441\u0438\u043b\u0430\u043d\u044c","select":"\u0412\u0438\u0431\u0456\u0440"},"admin":{"confirmdeletecomments":"\u0412\u0438 \u0437\u0431\u0438\u0440\u0430\u0454\u0442\u0435\u0441\u044f \u0432\u0438\u0434\u0430\u043b\u0438\u0442\u0438 \u043a\u043e\u043c\u0435\u043d\u0442\u0430\u0440\u0456, \u0432\u043f\u0435\u0432\u043d\u0435\u043d\u0456?","confirmation":"\u041f\u0456\u0434\u0442\u0432\u0435\u0440\u0434\u0436\u0435\u043d\u043d\u044f"},"debug":{"debuginfo":"\u0406\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u044f \u043f\u0440\u043e \u043d\u0430\u043b\u0430\u0433\u043e\u0434\u0436\u0435\u043d\u043d\u044f","line":"\u0420\u044f\u0434\u043e\u043a","stacktrace":"\u0422\u0440\u0430\u0441\u0443\u0432\u0430\u043d\u043d\u044f \u0441\u0442\u0435\u043a\u0430"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {M.util.help_popups.setup(Y);
+Y.use("moodle-course-categoryexpander",function() {Y.Moodle.course.categoryexpander.init();
+});
+ M.util.js_pending('random65cb8e913f4148'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random65cb8e913f4148'); });
+})();
+//]]>
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "2o9aqWfz+bPtknAaGtkVbwf/R2t6UohBYC/yi6abBVI6ISXNVRbiAr4JE0MnVcUGUhW4D7LRKoy3CcsdWmkuSA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\victo\\source\\repos\\LAB\\LAB\\LAB.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\victo\\.nuget\\packages\\log73\\0.7.0\\log73.0.7.0.nupkg.sha512",
+    "C:\\Users\\victo\\.nuget\\packages\\log73.extensions.newtonsoftjson\\0.7.0\\log73.extensions.newtonsoftjson.0.7.0.nupkg.sha512",
+    "C:\\Users\\victo\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\victo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\victo\\.nuget\\packages\\system.drawing.common\\8.0.1\\system.drawing.common.8.0.1.nupkg.sha512",
+    "C:\\Users\\victo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -37,7 +37,12 @@ class Program
             Thread.Sleep(2000);
             Console.WriteLine("Другий метод завершено.");
         });
+        thread.Name = "Другий метод приклад";
+        thread.Priority = ThreadPriority.Normal; 
         thread.Start();
+
+        thread.Join(); 
+        Console.WriteLine("Другий метод приєднано та завершено.");
     }
 
     static void Thread3()
