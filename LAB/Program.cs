@@ -1,67 +1,75 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Net;
-
-public class ApiDemo
-{
-    public void StartProcess(string processName)
-    {
-        Process.Start(processName);
-    }
-
-    public string DownloadWebPage(string url)
-    {
-        using (var client = new WebClient())
-        {
-            return client.DownloadString(url);
-        }
-    }
-
-    public void WriteToFile(string filePath, string content)
-    {
-        File.WriteAllText(filePath, content);
-    }
-
-    public void DrawRectangle(string imagePath)
-    {
-        using (var bitmap = new Bitmap(200, 200))
-        {
-            using (var graphics = Graphics.FromImage(bitmap))
-            {
-                graphics.FillRectangle(Brushes.Red, 0, 0, 200, 200);
-            }
-            bitmap.Save(imagePath, ImageFormat.Png);
-        }
-    }
-
-    public void UseGenericList()
-    {
-        List<string> myList = new List<string>();
-        myList.Add("Viktoriia");
-        myList.Add("Rekonvald");
-        myList.Add("310 group");
-
-        foreach (var item in myList)
-        {
-            Console.WriteLine(item);
-        }
-    }
-}
+using System.Threading;
+using System.Threading.Tasks;
 
 class Program
 {
     static void Main(string[] args)
     {
-        ApiDemo apiDemo = new ApiDemo();
-        apiDemo.StartProcess("notepad.exe");
-        string webpageContent = apiDemo.DownloadWebPage("https://test-english.com");
-        apiDemo.WriteToFile("C:\\Users\\victo\\source\\repos\\LAB\\LAB\\file.txt", webpageContent);
-        apiDemo.DrawRectangle("C:\\Users\\victo\\source\\repos\\LAB\\LAB\\file.png");
-        apiDemo.UseGenericList();
+        // 3 - виклики методів
+        Thread1();
+        Thread2();
+        Thread3();
 
-        Console.WriteLine("Demo completed!");
+        Async1();
+        Async2();
+        Async3();
+
+    }
+
+    //1 - thread
+    static void Thread1()
+    {
+        Thread thread = new Thread(() =>
+        {
+            Console.WriteLine("Перший метод...");
+            Thread.Sleep(1000);
+            Console.WriteLine("Перший метод завершено.");
+        });
+        thread.Start();
+    }
+
+    static void Thread2()
+    {
+        Thread thread = new Thread(() =>
+        {
+            Console.WriteLine("Другий метод...");
+            Thread.Sleep(2000);
+            Console.WriteLine("Другий метод завершено.");
+        });
+        thread.Start();
+    }
+
+    static void Thread3()
+    {
+        Thread thread = new Thread(new ParameterizedThreadStart((obj) =>
+        {
+            Console.WriteLine($"Третій метод запущено з параметром: {obj}");
+            Thread.Sleep(1500);
+            Console.WriteLine("Третій метод завершено.");
+        }));
+        thread.Start("параметр");
+    }
+
+    // 2 - async - await
+    static async void Async1()
+    {
+        Console.WriteLine("Перший метод аsync...");
+        await Task.Delay(2500); 
+        Console.WriteLine("Перший метод аsync завершено.");
+    }
+
+    static async void Async2()
+    {
+        Console.WriteLine("Другий метод аsync...");
+        await Task.Delay(3000);
+        Console.WriteLine("Другий метод аsync завершено.");
+    }
+
+    static async void Async3()
+    {
+        Console.WriteLine("Третій метод аsync...");
+        await Task.Delay(1500);
+        Console.WriteLine("Третій метод аsync завершено.");
     }
 }
