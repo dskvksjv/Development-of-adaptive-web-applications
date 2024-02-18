@@ -1,88 +1,75 @@
 ﻿using System;
-using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 
 class Program
 {
-
-    static void LoremIpsum()
+    static void Main(string[] args)
     {
-        try
-        {
-            string filePath = @"C:\Users\victo\source\repos\LAB\LAB\LoremIpsum.txt";
-            loremIpsumText = File.ReadAllText(filePath);
-        }
-        catch (FileNotFoundException)
-        {
-            Console.WriteLine("Файл не знайдено.");
-            Environment.Exit(1);
-        }
+        // 3 - виклики методів
+        Thread1();
+        Thread2();
+        Thread3();
+
+        Async1();
+        Async2();
+        Async3();
+
     }
 
-    static void WordCount()
+    //1 - thread
+    static void Thread1()
     {
-        int wordCount = loremIpsumText.Split(new char[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries).Length;
-        Console.WriteLine($"Кількість слів у тексті: {wordCount}");
+        Thread thread = new Thread(() =>
+        {
+            Console.WriteLine("Перший метод...");
+            Thread.Sleep(1000);
+            Console.WriteLine("Перший метод завершено.");
+        });
+        thread.Start();
     }
 
-    static void Math()
+    static void Thread2()
     {
-        Console.Write("Напиши число: ");
-        double inputNumber;
-        if (double.TryParse(Console.ReadLine(), out inputNumber))
+        Thread thread = new Thread(() =>
         {
-            double result = Square(inputNumber);
-            Console.WriteLine($"Квадрат введеного числа: {result}");
-        }
-        else
-        {
-            Console.WriteLine("Помилочка. Спробуй ще раз!");
-        }
+            Console.WriteLine("Другий метод...");
+            Thread.Sleep(2000);
+            Console.WriteLine("Другий метод завершено.");
+        });
+        thread.Start();
     }
 
-    static double Square(double number)
+    static void Thread3()
     {
-        return number * number;
+        Thread thread = new Thread(new ParameterizedThreadStart((obj) =>
+        {
+            Console.WriteLine($"Третій метод запущено з параметром: {obj}");
+            Thread.Sleep(1500);
+            Console.WriteLine("Третій метод завершено.");
+        }));
+        thread.Start("параметр");
     }
 
-    static string loremIpsumText;
-
-    static void Main()
+    // 2 - async - await
+    static async void Async1()
     {
-        LoremIpsum();
+        Console.WriteLine("Перший метод аsync...");
+        await Task.Delay(2500); 
+        Console.WriteLine("Перший метод аsync завершено.");
+    }
 
-        while (true)
-        {
-            Console.WriteLine("Оберіть опцію:");
-            Console.WriteLine("1. Вивести кількість слів у тексті Lorem Ipsum");
-            Console.WriteLine("2. Виконати математичну операцію");
-            Console.WriteLine("3. Вийти");
+    static async void Async2()
+    {
+        Console.WriteLine("Другий метод аsync...");
+        await Task.Delay(3000);
+        Console.WriteLine("Другий метод аsync завершено.");
+    }
 
-            int choice;
-            if (int.TryParse(Console.ReadLine(), out choice))
-            {
-                switch (choice)
-                {
-                    case 1:
-                        WordCount();
-                        break;
-                    case 2:
-                        Math();
-                        break;
-                    case 3:
-                        Environment.Exit(0);
-                        break;
-                    default:
-                        Console.WriteLine("Сталася помилочка");
-                        break;
-                }
-            }
-            else
-            {
-                Console.WriteLine("Сталася помилочка. Спробуй ще раз!");
-            }
-
-            Console.WriteLine();
-        }
+    static async void Async3()
+    {
+        Console.WriteLine("Третій метод аsync...");
+        await Task.Delay(1500);
+        Console.WriteLine("Третій метод аsync завершено.");
     }
 }
-
