@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Collections.Generic;
 
@@ -35,68 +35,142 @@ public class PizzaOrder
 
     public void DisplayOrderInfo()
     {
-        Console.WriteLine($"Order Number: {OrderNumber}");
-        Console.WriteLine($"Customer: {_customerName}");
-        Console.WriteLine($"Delivery: {(IsDelivery ? "Yes" : "No")}");
-        if (IsDelivery)
+        try
         {
-            Console.WriteLine($"Address: {_deliveryAddress}");
+            Console.WriteLine($"Order Number: {OrderNumber}");
+            Console.WriteLine($"Customer: {_customerName}");
+            Console.WriteLine($"Delivery: {(IsDelivery ? "Yes" : "No")}");
+            if (IsDelivery)
+            {
+                Console.WriteLine($"Address: {_deliveryAddress}");
+            }
+            Console.WriteLine($"Total: {_totalCost:C}");
+            Console.WriteLine("Options:");
+            foreach (var option in _options)
+            {
+                Console.WriteLine(option);
+            }
         }
-        Console.WriteLine($"Total: {_totalCost:C}");
-        Console.WriteLine("Options:");
-        foreach (var option in _options)
+        catch (Exception ex)
         {
-            Console.WriteLine(option);
+            Console.WriteLine($"An error occurred while displaying order info: {ex.Message}");
         }
-    }
-
-    public decimal CalculateTotalCost(decimal basePrice)
-    {
-        decimal deliveryCharge = IsDelivery ? 5.00m : 0.00m;
-        return basePrice + deliveryCharge;
     }
 
     //Робота з Type і TypeInfo
     public void DisplayTypeInfo()
     {
-        Type orderType = typeof(PizzaOrder);
-        TypeInfo orderTypeInfo = orderType.GetTypeInfo();
-        Console.WriteLine($"Type Name: {orderType.Name}");
-        Console.WriteLine($"Is Class: {orderTypeInfo.IsClass}");
-    }
-
-    //Робота з MemberInfo
-    public void DisplayMemberInfo()
-    {
-        MemberInfo[] members = typeof(PizzaOrder).GetMembers();
-        foreach (var member in members)
+        try
         {
-            Console.WriteLine($"Member Name: {member.Name}, Member Type: {member.MemberType}");
+            Type orderType = typeof(PizzaOrder);
+            TypeInfo orderTypeInfo = orderType.GetTypeInfo();
+            Console.WriteLine($"Type Name: {orderType.Name}");
+            Console.WriteLine($"Is Class: {orderTypeInfo.IsClass}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while displaying type info: {ex.Message}");
         }
     }
 
-    //Робота з FieldInfo
-    public void DisplayFieldInfo()
+    //MemberInfo
+    public void DisplayDynamicInfo(string memberName)
     {
-        FieldInfo[] fields = typeof(PizzaOrder).GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
-        foreach (var field in fields)
+        try
         {
-            Console.WriteLine($"Field Name: {field.Name}, Field Type: {field.FieldType}");
+            MemberInfo memberInfo = typeof(PizzaOrder).GetMember(memberName)[0];
+            Console.WriteLine($"Name: {memberInfo.Name}, Member Type: {memberInfo.MemberType}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while displaying dynamic info: {ex.Message}");
         }
     }
 
-    //Робота з MethodInfo
-    public void DisplayMethodInfo()
+    //кешування викликів через Reflection
+    private static Dictionary<string, MethodInfo> _methodCache = new Dictionary<string, MethodInfo>();
+
+    public void DisplayMethodInfo(string methodName)
     {
-        MethodInfo displayMethodInfo = typeof(PizzaOrder).GetMethod("DisplayOrderInfo");
-        if (displayMethodInfo != null)
+        try
         {
-            Console.WriteLine($"Method Name: {displayMethodInfo.Name}");
-            displayMethodInfo.Invoke(this, null);
+            if (!_methodCache.ContainsKey(methodName))
+            {
+                MethodInfo methodInfo = typeof(PizzaOrder).GetMethod(methodName);
+                if (methodInfo != null)
+                {
+                    _methodCache[methodName] = methodInfo;
+                }
+                else
+                {
+                    Console.WriteLine("Method not found.");
+                    return;
+                }
+            }
+
+            Console.WriteLine($"Method Name: {_methodCache[methodName].Name}");
+            _methodCache[methodName].Invoke(this, null);
         }
-        else
+        catch (Exception ex)
         {
-            Console.WriteLine("Method not found.");
+            Console.WriteLine($"An error occurred while displaying method info: {ex.Message}");
+        }
+    }
+
+    //динамічне створення об'єктів на основі даних Reflection
+    public static object CreateInstance(string className)
+    {
+        try
+        {
+            Type type = Type.GetType(className);
+            if (type != null)
+            {
+                return Activator.CreateInstance(type);
+            }
+            else
+            {
+                Console.WriteLine("Class not found.");
+                return null;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while creating an instance: {ex.Message}");
+            return null;
+        }
+    }
+
+    //MemberInfo nf FieldInfo
+    public void SetAttribute(string memberName, string attributeName, object value)
+    {
+        try
+        {
+            MemberInfo memberInfo = typeof(PizzaOrder).GetMember(memberName)[0];
+            if (memberInfo != null)
+            {
+                switch (memberInfo.MemberType)
+                {
+                    case MemberTypes.Field:
+                        FieldInfo fieldInfo = (FieldInfo)memberInfo;
+                        fieldInfo.SetValue(this, value);
+                        break;
+                    case MemberTypes.Property:
+                        PropertyInfo propertyInfo = (PropertyInfo)memberInfo;
+                        propertyInfo.SetValue(this, value);
+                        break;
+                    default:
+                        Console.WriteLine("Error member type.");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("not found.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error setting attribute: {ex.Message}");
         }
     }
 }
@@ -121,7 +195,6 @@ class Program
         int pizzaChoice = int.Parse(Console.ReadLine()) - 1;
         Pizza chosenPizza = pizzas[pizzaChoice];
 
-        // Додавання опцій
         List<string> options = new List<string>();
         bool addingOptions = true;
         while (addingOptions)
@@ -155,14 +228,32 @@ class Program
 
         PizzaOrder order = new PizzaOrder("Victoria Rekonvald", 101, true, "Mykolaiv", totalCost, options);
 
-        // Reflection
+        //виклик методів через Reflection
+        order.DisplayOrderInfo();
+        Console.WriteLine();
+
+        //інформація про клас через Reflection
         order.DisplayTypeInfo();
         Console.WriteLine();
-        order.DisplayMemberInfo();
+
+        //динамічнв інформація Reflection
+        order.DisplayDynamicInfo("OrderNumber");
+        order.DisplayDynamicInfo("IsDelivery");
         Console.WriteLine();
-        order.DisplayFieldInfo();
+
+        //кешуванням через Reflection
+        order.DisplayMethodInfo("DisplayOrderInfo");
         Console.WriteLine();
-        order.DisplayMethodInfo();
+
+        //створення об'єкту за допомогою Reflection
+        object newOrder = PizzaOrder.CreateInstance("PizzaOrder");
+        Console.WriteLine($"New instance created: {newOrder}");
+        Console.WriteLine();
+
+        //встановлення атрибуту Reflection
+        order.SetAttribute("_customerName", "NewCustomer", "John Doe");
+        order.DisplayOrderInfo();
     }
 }
+
 
