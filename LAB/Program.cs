@@ -1,87 +1,44 @@
-﻿using System;
-using System.IO;
+using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Threading.Tasks;
 
-class Program
+namespace CryptoCompareAPI
 {
-
-    static void LoremIpsum()
+    class Program
     {
-        try
+        static async Task Main(string[] args)
         {
-            string filePath = @"C:\Users\victo\source\repos\LAB\LAB\LoremIpsum.txt";
-            loremIpsumText = File.ReadAllText(filePath);
-        }
-        catch (FileNotFoundException)
-        {
-            Console.WriteLine("Файл не знайдено.");
-            Environment.Exit(1);
-        }
-    }
-
-    static void WordCount()
-    {
-        int wordCount = loremIpsumText.Split(new char[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries).Length;
-        Console.WriteLine($"Кількість слів у тексті: {wordCount}");
-    }
-
-    static void Math()
-    {
-        Console.Write("Напиши число: ");
-        double inputNumber;
-        if (double.TryParse(Console.ReadLine(), out inputNumber))
-        {
-            double result = Square(inputNumber);
-            Console.WriteLine($"Квадрат введеного числа: {result}");
-        }
-        else
-        {
-            Console.WriteLine("Помилочка. Спробуй ще раз!");
-        }
-    }
-
-    static double Square(double number)
-    {
-        return number * number;
-    }
-
-    static string loremIpsumText;
-
-    static void Main()
-    {
-        LoremIpsum();
-
-        while (true)
-        {
-            Console.WriteLine("Оберіть опцію:");
-            Console.WriteLine("1. Вивести кількість слів у тексті Lorem Ipsum");
-            Console.WriteLine("2. Виконати математичну операцію");
-            Console.WriteLine("3. Вийти");
-
-            int choice;
-            if (int.TryParse(Console.ReadLine(), out choice))
+            try
             {
-                switch (choice)
-                {
-                    case 1:
-                        WordCount();
-                        break;
-                    case 2:
-                        Math();
-                        break;
-                    case 3:
-                        Environment.Exit(0);
-                        break;
-                    default:
-                        Console.WriteLine("Сталася помилочка");
-                        break;
-                }
-            }
-            else
-            {
-                Console.WriteLine("Сталася помилочка. Спробуй ще раз!");
-            }
+                var httpClient = new HttpClient();
 
-            Console.WriteLine();
+                // GET 
+                var responseData = await GetTopCoins(httpClient);
+                Console.WriteLine($"GET Response: {responseData}");
+
+                // POST 
+                var postData = new { param1 = "value1", param2 = "value2" };
+                var postDataResponse = await PostData(httpClient, postData);
+                Console.WriteLine($"POST Response: {postDataResponse}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                Environment.ExitCode = (int)HttpStatusCode.InternalServerError;
+            }
+        }
+
+        static async Task<string> GetTopCoins(HttpClient httpClient)
+        {
+            var response = await httpClient.Get("top/totalvolfull?limit=10&tsym=USD");
+            return response;
+        }
+
+        static async Task<string> PostData(HttpClient httpClient, object data)
+        {
+            var response = await httpClient.Post("endpoint", data);
+            return response;
         }
     }
 }
